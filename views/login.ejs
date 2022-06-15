@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partial/head.ejs')-%>
+    <link rel="stylesheet" href="/css/loginstyle.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <div class="form">
+            <form action="" method="post">
+                <input type="text" placeholder="Ingresar usuario o email">
+                <input class="form-control" type="password" maxlength="15" placeholder="Ingresar contraseña"
+                    autocomplete="new-password" name="password_2">
+                <input type="submit" class="btn" value="Iniciar">
+            </form>
+            <div class="links">
+                <a href="/forgot">Recuperar</a>
+                <a href="/singup">Crear</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
