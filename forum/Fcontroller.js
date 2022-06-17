@@ -9,7 +9,7 @@ const lAll = async (req, res, next) => {
 //busca un post
 const lOne = async (req, res, next)=> {
     let mbResponse= null;
-    if (req.query.title) {
+    if (req.query.titulo) {
         mbResponse = await getPostsWith(req.query.titulo);
       } else {
         if (notNumber(req.params.id, res)) return;
