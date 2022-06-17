@@ -61,4 +61,4 @@ const deleteUserById = (id)=>{
     }
 }
 
-module.exports= { getAllOne, getAllUser, addNewPost, deleteUserById, editOne }
+module.exports= { getAllOne, getAllUser, addNewPost, deleteUserById, editOne , getPostsWith}

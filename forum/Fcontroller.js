@@ -1,4 +1,4 @@
-const { getAllOne, getAllUser, addNewPost, deleteUserById,editOne}= require("./Fmodels");
+const { getAllOne, getAllUser, addNewPost, deleteUserById,editOne, getPostsWith}= require("./Fmodels");
 const notNumber = require("../utils/notNumber");
 //buscar todos los post
 const lAll = async (req, res, next) => {
