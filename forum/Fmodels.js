@@ -22,7 +22,7 @@ const getAllOne= (id) =>{
     }
 }
 const getPostsWith = (string) => {
-    const query = `SELECT * FROM post_com WHERE title LIKE '%${string}%'`;
+    const query = `SELECT * FROM post_com WHERE titulo LIKE '%${string}%'`;
     try {
       return pool.query(query);
     } catch (error) {

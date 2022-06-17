@@ -10,7 +10,7 @@ const lAll = async (req, res, next) => {
 const lOne = async (req, res, next)=> {
     let mbResponse= null;
     if (req.query.title) {
-        mbResponse = await getPostsWith(req.query.title);
+        mbResponse = await getPostsWith(req.query.titulo);
       } else {
         if (notNumber(req.params.id, res)) return;
         mbResponse = await getAllOne(+req.params.id);
