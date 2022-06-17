@@ -21,6 +21,15 @@ const getAllOne= (id) =>{
         return error
     }
 }
+const getPostsWith = (string) => {
+    const query = `SELECT * FROM post_com WHERE title LIKE '%${string}%'`;
+    try {
+      return pool.query(query);
+    } catch (error) {
+      error.message = error.code;
+      return error;
+    }
+  };
 
 const addNewPost=(post)=>{
     const query = "INSERT INTO post_com SET ?";

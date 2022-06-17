@@ -8,8 +8,13 @@ const lAll = async (req, res, next) => {
 };
 //busca un post
 const lOne = async (req, res, next)=> {
-    if (notNumber(req.params.id, res)) return;
-    const mbResponse = await getAllOne(+req.params.id);
+    let mbResponse= null;
+    if (req.query.title) {
+        mbResponse = await getPostsWith(req.query.title);
+      } else {
+        if (notNumber(req.params.id, res)) return;
+        mbResponse = await getAllOne(+req.params.id);
+    }
     if (mbResponse instanceof Error) return next(mbResponse);
     mbResponse.length ? res.status(200).json(mbResponse) : next();
 };
