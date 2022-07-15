@@ -3,7 +3,7 @@ require("./data/config");
 const PORT = process.env.PORT;
 const express = require('express');
 const path= require("path");
-
+const cors = require("cors");
 
 const server = express();
 
@@ -15,7 +15,7 @@ server.use(express.urlencoded({ extended: true }));
 server.set('views',path.join(__dirname,'views'));
 server.set('view engine', 'ejs');
 server.use(express.static(path.join(__dirname,'public/image')));
-
+server.use(cors());
 server.use('/css', express.static(path.join(__dirname,'public/css')))
 server.use('/js', express.static(path.join(__dirname,'public/js')))
 
